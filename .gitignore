@@ -20,3 +20,4 @@
 
 .sass*
 config/database.yml
+config/facebook.yml
