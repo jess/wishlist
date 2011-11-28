@@ -9,6 +9,14 @@
 <body>
 
 <%= yield %>
+<p>Params:</p>
+<%= debug params %>
+<p>Session</p>
+<%= debug session %>
+<p>fb_cookies cookies</p>
+<%= debug @facebook_cookies %>
+<p>current_user</p>
+<%= current_user %>
 
 </body>
 </html>
