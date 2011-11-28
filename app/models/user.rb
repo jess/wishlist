@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :lists
 
   def self.create_fb_user(auth,graph)
     create! do |user|

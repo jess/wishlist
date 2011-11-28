@@ -1,0 +1,15 @@
+// Place all the styles related to the lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.add_item {
+  //display: none;
+}
+
+.items {
+  padding: 10px 0;
+  .item {
+    border-bottom: 1px dotted #ccc;
+
+  }
+}

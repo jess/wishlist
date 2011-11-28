@@ -1,4 +1,9 @@
 Wishlist::Application.routes.draw do
+
+  resources :lists do
+    resources :items
+  end
+
   match '/sessions/create' => 'sessions#create'
   resources :sessions do
 

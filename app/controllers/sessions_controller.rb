@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
   def create
     auth = @facebook_cookies
     user = User.where(:uid => auth['user_id']).first || User.create_fb_user(auth,get_graph)
-    session[:user_id] = user.id
+    session[:uid] = user.uid
     redirect_to root_url, :notice => "Signed in!"
   end
 

@@ -8,9 +8,9 @@ class ApplicationController < ActionController::Base
 
   private
   def current_user
-    fb = check_for_session if session[:user_id].blank?
+    fb = check_for_session if session[:uid].blank?
     db = check_for_db_user
-    if !fb.nil? && db.nil?
+    if !fb.nil? && @current_user.nil?
       graph = get_graph
       @current_user = User.create_fb_user(@facebook_cookies,graph)
     end
@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
 
   def check_for_db_user
     begin
-      @current_user ||= User.find(session[:user_id]) if session[:user_id]
+      @current_user ||= User.find_by_uid(session[:uid]) if session[:uid]
     rescue 
       nil
     end
@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
   def check_for_session
     parse_facebook_cookies 
     unless @facebook_cookies.nil?
-      session[:user_id] = @facebook_cookies["user_id"]
+      session[:uid] = @facebook_cookies["user_id"]
     end
   end
 

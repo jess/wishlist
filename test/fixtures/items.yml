@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  list_id: 1
+  name: MyString
+  url: MyString
+  description: MyText
+
+two:
+  list_id: 1
+  name: MyString
+  url: MyString
+  description: MyText

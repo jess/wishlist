@@ -1,0 +1,13 @@
+$blueprint-grid-columns: 19;
+
+@import "compass";
+@import "compass/reset";
+@import "blueprint";
+
+body {
+  @include blueprint-typography(true);
+}
+
+.container {
+  @include container;
+}

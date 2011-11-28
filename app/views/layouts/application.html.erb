@@ -7,16 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-<p>Params:</p>
-<%= debug params %>
-<p>Session</p>
-<%= debug session %>
-<p>fb_cookies cookies</p>
-<%= debug @facebook_cookies %>
-<p>current_user</p>
-<%= current_user %>
+  <div class="container">
+    <%= yield %>
+  </div>
+<% if false %>
+  <p>Params:</p>
+  <%= debug params %>
+  <p>Session</p>
+  <%= debug session %>
+  <p>fb_cookies cookies</p>
+  <%= debug @facebook_cookies %>
+  <p>current_user</p>
+  <%= current_user %>
+<% end %>
 
 </body>
 </html>
