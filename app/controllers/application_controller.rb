@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
 
   def check_for_db_user
     begin
-      @current_user ||= User.find_by_uid(session[:uid]) if session[:uid]
+      @current_user = User.find_by_uid(session[:uid]) if session[:uid] && @current_user.blank?
     rescue 
       nil
     end

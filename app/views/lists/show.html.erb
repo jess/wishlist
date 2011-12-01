@@ -10,6 +10,7 @@
 </p>
 <table class="items">
   <h2>Wish List</h2>
+  <%= link_to "Share List", '#share' %>
   <% @list.items.each do |item| %>
     <tr class="item">
       <td><%= item.name %></td>
@@ -26,7 +27,7 @@
 <%= link_to 'Edit List', edit_list_path(@list) %> |
 <%= link_to 'Show All Lists', lists_path %>
 
-
+<a name="share"></a>
 <div class="create_your_list">
   <h2>Share</h2>
   <p>Now it's time to pass around the list...</p>
@@ -41,11 +42,10 @@
   <a class="addthis_button_preferred_3"></a>
   <a class="addthis_button_preferred_4"></a>
   <a class="addthis_button_compact"></a>
-  <a class="addthis_counter addthis_bubble_style"></a>
   </div>
   <script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ed7a3847263c31b"></script>
   <!-- AddThis Button END -->
   <p>
-    <p>Your share url:  <%= link_to share_url, share_url %></p>
+    <p>Your share url:  <%= link_to share_url, share_url, :target => "_blank" %></p>
   </p>
 </div>
