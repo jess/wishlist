@@ -33,7 +33,8 @@ class ApplicationController < ActionController::Base
   end
 
   def parse_facebook_cookies
-    @facebook_cookies ||= Koala::Facebook::OAuth.new.get_user_info_from_cookie(cookies) rescue nil
+    @facebook_cookies = Koala::Facebook::OAuth.new.get_user_info_from_cookie(cookies) rescue nil
+    logger.info "parse method:  #{@facebook_cookies}"
   end
 
   def get_graph

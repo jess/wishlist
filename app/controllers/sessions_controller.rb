@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+    logger.info @facebook_cookies.inspect
     auth = @facebook_cookies
     user = User.where(:uid => auth['user_id']).first || User.create_fb_user(auth,get_graph)
     session[:uid] = user.uid
