@@ -1,6 +1,9 @@
 Wishlist::Application.routes.draw do
 
   resources :lists do
+    member do
+      get :share
+    end
     resources :items
   end
 

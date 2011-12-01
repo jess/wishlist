@@ -25,3 +25,24 @@
 
 <%= link_to 'Edit List', edit_list_path(@list) %> |
 <%= link_to 'Show All Lists', lists_path %>
+
+
+<div class="create_your_list">
+  <h2>Share</h2>
+  <p>Now it's time to pass around the list...</p>
+  <p>Note:  To share on Facebook, click the Facebook logo.  From there you can use the drop down to either post ot your
+  wall or to privately send to someone in a message.</p>
+  <!-- AddThis Button BEGIN -->
+  <div class="addthis_toolbox addthis_default_style addthis_32x32_style"
+         addthis:url="<%= share_url %>"
+         addthis:title="<%= share_title %>">
+  <a class="addthis_button_preferred_1"></a>
+  <a class="addthis_button_preferred_2"></a>
+  <a class="addthis_button_preferred_3"></a>
+  <a class="addthis_button_preferred_4"></a>
+  <a class="addthis_button_compact"></a>
+  <a class="addthis_counter addthis_bubble_style"></a>
+  </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ed7a3847263c31b"></script>
+  <!-- AddThis Button END -->
+</div>

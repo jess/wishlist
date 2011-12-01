@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => :share
   # GET /lists
   # GET /lists.json
   def index
@@ -9,6 +9,10 @@ class ListsController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @lists }
     end
+  end
+
+  def share
+    @list = List.find(params[:id])
   end
 
   # GET /lists/1

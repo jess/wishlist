@@ -1,4 +1,5 @@
-$blueprint-grid-columns: 19;
+$blueprint-grid-columns: 18;
+$blue: #648dbb;
 
 @import "compass";
 @import "compass/reset";
@@ -6,8 +7,22 @@ $blueprint-grid-columns: 19;
 
 body {
   @include blueprint-typography(true);
+  background: image_url('winter_bk.jpg') fixed repeat-x;
 }
 
 .container {
   @include container;
+  margin-top: 25px;
+  background: #fff;
+  @include border-radius(25px);
+  border: solid 2px darken($blue,25%);
+  .padding {
+    padding: 25px;
+  }
+}
+
+.create_your_list {
+  margin-top: 45px;
+  border-top: dotted #ccc 1px;
+  padding-top: 15px;
 }
