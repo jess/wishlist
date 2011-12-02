@@ -22,7 +22,7 @@
 
     // Additional initialization code here
     FB.Event.subscribe('auth.login', function (response) {
-      window.location = '/'
+      //window.location = '/'
     });
   };
 
@@ -39,13 +39,13 @@
    function login() {
       FB.login(function(response) {
          if (response.authResponse) {
-           console.log('Welcome!  Fetching your information.... ');
+           //console.log('Welcome!  Fetching your information.... ');
            FB.api('/me', function(response) {
              //console.log('Good to see you, ' + response.name + '.');
-              window.location = '/'
+              self.location = '<%= root_path %>'
            });
          } else {
-           console.log('User cancelled login or did not fully authorize.');
+           //console.log('User cancelled login or did not fully authorize.');
          }
        }, {scope: 'email'});
   }

@@ -1,7 +1,10 @@
 module ListsHelper
   def share_title
+    @list.name
+  end
+
+  def share_description
     name = @list.user.name
-    #CGI::escape("#{name} is using Wish List For All App to share a wish list with you")
     "#{name} is using Wish List For All App to share a wish list with you"
   end
 

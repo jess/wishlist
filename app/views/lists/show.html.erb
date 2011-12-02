@@ -1,3 +1,4 @@
+<% @page_title = "Add and Edit Your List - Wish List" %>
 <p id="notice"><%= notice %></p>
 <h1><%= @list.user.name %></h1>
 <h2>
@@ -36,7 +37,8 @@
   <!-- AddThis Button BEGIN -->
   <div class="addthis_toolbox addthis_default_style addthis_32x32_style"
          addthis:url="<%= share_url %>"
-         addthis:title="<%= share_title %>">
+         addthis:title="<%= share_title %>"
+         addthis:description="<%= share_description %>">
   <a class="addthis_button_preferred_1"></a>
   <a class="addthis_button_preferred_2"></a>
   <a class="addthis_button_preferred_3"></a>
