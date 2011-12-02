@@ -4,6 +4,7 @@ $blue: #648dbb;
 @import "compass";
 @import "compass/reset";
 @import "blueprint";
+@import "fancy-buttons";
 
 body {
   @include blueprint-typography(true);
@@ -25,4 +26,16 @@ body {
   margin-top: 45px;
   border-top: dotted #ccc 1px;
   padding-top: 15px;
+}
+
+.fancy {
+  @include fancy-button(#ccc);
+}
+
+.smaller {
+  font-size: 14px;
+}
+
+.actions input {
+  @extend .fancy;
 }

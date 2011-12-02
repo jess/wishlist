@@ -48,6 +48,8 @@ GEM
     erubis (2.7.0)
     execjs (1.2.9)
       multi_json (~> 1.0)
+    fancy-buttons (1.1.2)
+      compass (>= 0.11)
     faraday (0.7.5)
       addressable (~> 2.2.6)
       multipart-post (~> 1.1.3)
@@ -126,6 +128,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.1.1)
   compass (= 0.12.alpha.1)
+  fancy-buttons
   jquery-rails
   koala
   pg
